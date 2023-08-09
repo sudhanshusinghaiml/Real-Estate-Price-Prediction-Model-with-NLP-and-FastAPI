@@ -1,28 +1,28 @@
-from pydantic import BaseModel, StrictFloat
+from pydantic import BaseModel, StrictFloat, StrictInt
 
 class PropertyPricePrediction(BaseModel):
-    Property_Type: StrictFloat
-    Club_House: StrictFloat
-    School_University_In_Township: StrictFloat
-    Hospital_In_Township: StrictFloat
-    Mall_In_Township: StrictFloat
-    Park_Jogging_Track: StrictFloat
-    Swimming_Pool: StrictFloat
-    Gym: StrictFloat
+    Property_Type: StrictInt
+    Club_House: StrictInt
+    School_University_In_Township: StrictInt
+    Hospital_In_Township: StrictInt
+    Mall_In_Township: StrictInt
+    Park_Jogging_Track: StrictInt
+    Swimming_Pool: StrictInt
+    Gym: StrictInt
     Property_Area_in_SqFt: StrictFloat
     Price_By_SubArea: StrictFloat
-    Amenities_Score: StrictFloat
+    Amenities_Score: StrictInt
     Price_By_Amenities_Score: StrictFloat
-    Noun_Counts: StrictFloat
-    Verb_Counts: StrictFloat
-    Adjective_Counts: StrictFloat
-    boasts_elegant: StrictFloat
-    elegant_towers: StrictFloat
-    every_day: StrictFloat
-    great_community: StrictFloat
-    mantra_gold: StrictFloat
-    offering_bedroom: StrictFloat
-    quality_specification: StrictFloat
-    stories_offering: StrictFloat
-    towers_stories: StrictFloat
-    world_class: StrictFloat    
+    Noun_Counts: StrictInt
+    Verb_Counts: StrictInt
+    Adjective_Counts: StrictInt
+    boasts_elegant: StrictInt
+    elegant_towers: StrictInt
+    every_day: StrictInt
+    great_community: StrictInt
+    mantra_gold: StrictInt
+    offering_bedroom: StrictInt
+    quality_specification: StrictInt
+    stories_offering: StrictInt
+    towers_stories: StrictInt
+    world_class: StrictInt    
