@@ -1,4 +1,4 @@
-from pydantic import BaseModel, float, int
+from pydantic import BaseModel
 
 class PropertyPricePrediction(BaseModel):
     Property_Type: int
