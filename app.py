@@ -14,19 +14,19 @@ loaded_model = joblib.load(fileName)
 # 3. Index route, opens automatically on http://127.0.0.1:8000
 @PropertyPricePredictionApp.get('/')
 def index():
-    return {"message":'Hello!!! Welcome to the Property Price Prediction Model'}
+    return {'message':'Hello!!! Welcome to the Property Price Prediction Model'}
 
 
 # 4. Expose the prediction functionality, make a prediction from the passed
 #    JSON data and return the predicted price with the confidence (http://127.0.0.1:8000/predictprice)
 @PropertyPricePredictionApp.post('/predictprice')
 def price_prediction(data: PropertyPricePrediction):
-    print('\n\nBefore converting Dict',data)
+    print(type(data))
     data = data.dict()
-    print('\n\nAfter converting Dict',data)
+    print(data)
     
     data = pd.DataFrame([data])
-    print('\n\nDataframe output-\n',data)
+    print(data.head())
     
     predicted_value = loaded_model.predict(data)
     print(str(predicted_value))
