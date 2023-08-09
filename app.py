@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 import uvicorn
-from PropertyVariables import PropertyPricePrediction
+from PropertyPricePrediction import PropertyPricePrediction
 import pandas as pd
 import joblib
 
