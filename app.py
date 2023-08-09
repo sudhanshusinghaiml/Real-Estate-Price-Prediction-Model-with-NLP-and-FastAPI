@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 import uvicorn
-from PropertyPricePrediction import PropertyPricePrediction
+from PropertyVariables import PropertyPrice
 import pandas as pd
 import joblib
 
@@ -8,7 +8,7 @@ import joblib
 PropertyPricePredictionApp = FastAPI()
 
 # 2. Load the model from disk
-fileName = 'property_price_prediction_using_voting_regression.sav'
+fileName = 'property_price_prediction_model.sav'
 loaded_model = joblib.load(fileName)
 
 # 3. Index route, opens automatically on http://127.0.0.1:8000
@@ -19,8 +19,8 @@ def index():
 
 # 4. Expose the prediction functionality, make a prediction from the passed
 #    JSON data and return the predicted price with the confidence (http://127.0.0.1:8000/predictprice)
-@PropertyPricePredictionApp.post('/predictprice')
-def price_prediction(data: PropertyPricePrediction):
+@PropertyPricePredictionApp.post('/PredictPrice')
+def price_prediction(data: PropertyPrice):
     data = data.dict()
     print(data)
     

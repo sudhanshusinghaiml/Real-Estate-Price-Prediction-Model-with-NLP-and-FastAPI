@@ -1,7 +1,7 @@
 from pydantic import BaseModel
 from typing import Optional
 
-class PropertyPricePrediction(BaseModel):
+class PropertyPrice(BaseModel):
     Property_Type: Optional[int] = None
     Club_House: Optional[int] = None
     School_University_In_Township: Optional[int] = None
