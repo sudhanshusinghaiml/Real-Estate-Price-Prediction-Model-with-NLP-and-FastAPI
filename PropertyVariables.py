@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional
 
 class PropertyPrice(BaseModel):
-    Property_Type: int
+    Property_Type: float
     Club_House: int
     School_University_In_Township: int
     Hospital_In_Township: int
