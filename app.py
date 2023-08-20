@@ -11,6 +11,7 @@ PropertyPricePredictionApp = FastAPI()
 fileName = 'property_price_prediction_model.sav'
 loaded_model = joblib.load(fileName)
 
+
 # 3. Index route, opens automatically on http://127.0.0.1:8000
 @PropertyPricePredictionApp.get('/')
 def index():
